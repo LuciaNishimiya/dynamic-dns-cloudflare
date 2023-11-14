@@ -1,0 +1,17 @@
+# Cloudflare API key for authentication
+CLOUDFLARE_API_KEY=
+
+# Main domain on Cloudflare
+CLOUDFLARE_DOMAIN=example.com
+
+# Specific subdomain on the main domain
+CLOUDFLARE_SUBDOMAIN=dns1.example.com
+
+# Discord authentication token for the bot
+DISCORD_TOKEN=
+
+# Discord channel ID where messages will be sent
+DISCORD_CHANNEL_ID=
+
+# Port to monitor (e.g., port 80 for HTTP)
+PORT_TO_PING=80
