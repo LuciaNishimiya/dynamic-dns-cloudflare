@@ -16,15 +16,16 @@ const headers = {
 const getDnsData = async () => {
     const zoneID = await getZoneID()
     const recordID = await getRecordID()
-
+    return new Promise((resolve, reject) => {
     axios.get(`${apiUrl}/zones/${zoneID}/dns_records/${recordID}`, { headers })
         .then(response => {
-            return response.data.result;
-
+            resolve(response.data.result);
         })
         .catch(error => {
+            reject(error);
             console.error('Error fetching dns data:', error);
         });
+    })
 }
 
 export { getDnsData }
