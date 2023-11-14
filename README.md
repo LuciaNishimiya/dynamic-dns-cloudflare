@@ -11,7 +11,7 @@ This project provides a simple solution to automatically update dynamic IP addre
 
 - [Node.js](https://nodejs.org/) (version 18 or higher)
 - [Cloudflare API Credentials](https://developers.cloudflare.com/api)
-- Discord Bot Token.
+- [Discord Bot Token](https://discord.com/developers/).
 
 ## Configuration
 
