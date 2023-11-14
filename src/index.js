@@ -1,7 +1,6 @@
 import { sendMessage } from "./services/discord";
 import { updateDns } from "./services/cloudflareApi";
 import { getIp } from './services/getIpApi';
-import { ping } from "./services/ping";
 import dotenv from 'dotenv';
 import { getDnsData } from "./services/cloudflareApi/getDnsData";
 dotenv.config();

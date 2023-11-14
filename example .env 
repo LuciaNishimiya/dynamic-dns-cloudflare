@@ -12,6 +12,3 @@ DISCORD_TOKEN=
 
 # Discord channel ID where messages will be sent
 DISCORD_CHANNEL_ID=
-
-# Port to monitor (e.g., port 80 for HTTP)
-PORT_TO_PING=80
