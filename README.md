@@ -31,7 +31,7 @@ npm install
 
  Open the .env file in a text editor and provide the required information.
 
-# Usage
+## Usage
 
 ```bash
 npm run start
