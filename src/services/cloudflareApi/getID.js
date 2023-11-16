@@ -10,13 +10,26 @@ const headers = {
     'Authorization': `Bearer ${cloudflareAPIKey}`,
     'Content-Type': 'application/json',
 };
+
+const idCache = {};
+
 async function getID(args) {
     try {
+        // Check if the result is already in the cache
+        if (idCache[args]) {
+            console.log(`Using cached result for ${args}: ${idCache[args]}`);
+            return idCache[args];
+        }
+        // Make a request if not in cache
         const response = await axios.get(`${apiUrl}${args}`, { headers });
 
         if (response.status === 200) {
             const dataId = response.data.result[0].id;
             console.log(`${args} id was successfully get ${dataId}`);
+
+            // Store the result in the cache
+            idCache[args] = dataId;
+
             return dataId;
         } else {
             console.error(`Failed to retrieve on get id of ${args}`);
