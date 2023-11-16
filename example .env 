@@ -7,6 +7,9 @@ CLOUDFLARE_DOMAIN=example.com
 # Specific subdomain on the main domain
 CLOUDFLARE_SUBDOMAIN=dns1.example.com
 
+# Time interval in minutes for updating DNS records
+TIME_TO_UPDATE_DNS=20
+
 # Discord authentication token for the bot
 DISCORD_TOKEN=
 

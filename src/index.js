@@ -6,6 +6,7 @@ import { getDnsData } from "./services/cloudflareApi/getDnsData";
 dotenv.config();
 
 const subdomain = process.env.CLOUDFLARE_SUBDOMAIN;
+const TimeToUpdateDNS = process.env.TIME_TO_UPDATE_DNS;
 
 async function setIP(ip) {
     // this is only used to add styles to the discord message
@@ -46,4 +47,4 @@ setInterval(async () => {
     } catch (error) {
         console.error('Error getting IP: ' + error.message);
     }
-}, 20 * 60 * 1000);
+}, TimeToUpdateDNS * 60 * 1000);
