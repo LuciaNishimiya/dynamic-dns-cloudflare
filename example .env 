@@ -7,6 +7,12 @@ CLOUDFLARE_DOMAIN=example.com
 # Specific subdomain on the main domain
 CLOUDFLARE_SUBDOMAIN=dns1.example.com
 
+# DNS record type 
+DNS_TYPE=A
+
+# Whether the DNS record should be proxied through Cloudflare (true/false)
+DNS_PROXIED=false
+
 # Time interval in minutes for updating DNS records
 TIME_TO_UPDATE_DNS=20
 
