@@ -38,7 +38,6 @@ setInterval(async () => {
         const dnsIp = dnsData.content;
 
         if (dnsIp !== newIp) {
-            ip = newIp;
             setIP(newIp);
         }
 
