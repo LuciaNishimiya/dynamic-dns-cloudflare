@@ -13,29 +13,22 @@ const headers = {
 
 const idCache = {};
 
-async function getID(args) {
+async function getID(endpoint) {
     try {
         // Check if the result is already in the cache
-        if (idCache[args]) {
-            console.log(`Using cached result for ${args}: ${idCache[args]}`);
-            return idCache[args];
+        if (idCache[endpoint]) {
+            return idCache[endpoint];
         }
         // Make a request if not in cache
-        const response = await axios.get(`${apiUrl}${args}`, { headers });
-
-        if (response.status === 200) {
+        const response = await axios.get(`${apiUrl}${endpoint}`, { headers });
             const dataId = response.data.result[0].id;
-            console.log(`${args} id was successfully get ${dataId}`);
-
+        console.log(`${endpoint} id was successfully get ${dataId}`);
             // Store the result in the cache
-            idCache[args] = dataId;
+        idCache[endpoint] = dataId;
 
-            return dataId;
-        } else {
-            console.error(`Failed to retrieve on get id of ${args}`);
-        }
+        return dataId;
     } catch (error) {
-        console.error(`An error occurred on get id of ${args}:`, error.message);
+        throw new Error(`An error occurred on get id of ${endpoint}:`, error);
     }
 }
 
