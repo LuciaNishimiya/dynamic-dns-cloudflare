@@ -16,8 +16,5 @@ DNS_PROXIED=false
 # Time interval in minutes for updating DNS records
 TIME_TO_UPDATE_DNS=20
 
-# Discord authentication token for the bot
-DISCORD_TOKEN=
-
-# Discord channel ID where messages will be sent
-DISCORD_CHANNEL_ID=
+# Discord webhook URL for notifications
+DISCORD_WEBHOOK_URL=
